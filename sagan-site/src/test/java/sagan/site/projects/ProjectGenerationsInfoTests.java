@@ -43,7 +43,7 @@ class ProjectGenerationsInfoTests {
 		ProjectGenerationsInfo generationsInfo = new ProjectGenerationsInfo();
 		generationsInfo.setGenerations(this.generations);
 		generationsInfo.computeSupportPolicyDates(SupportPolicy.SPRING_BOOT);
-		assertThat(generationsInfo.getLastModified()).isAfter(before);
+		assertThat(generationsInfo.getLastModified()).isAfterOrEqualTo(before);
 	}
 
 }

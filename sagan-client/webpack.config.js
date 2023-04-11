@@ -75,7 +75,13 @@ module.exports = {
     ],
     module: {
         rules: [
-
+            {
+                test: /\.(woff2|woff|eot|ttf|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name].[ext]',
+                },
+            },
             {
                 test: /\.scss$/,
                 use: [
